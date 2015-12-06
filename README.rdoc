@@ -1,0 +1,11 @@
+== README
+
+This application houses the rails app that will drive both the Tenant website as well as the Tenant API (the API being the much more important responsibility)
+
+* Ruby version - 4.2.3
+
+=== System dependencies
+
+=== Configuration
+
+=== Deployment instructions
