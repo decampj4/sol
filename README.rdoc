@@ -2,9 +2,11 @@
 
 This application houses the rails app that will drive both the Tenant website as well as the Tenant API (the API being the much more important responsibility)
 
-* Ruby version - 4.2.3
+* Rails version - 4.2.3
+* Ruby version - 2.1.5
 
 === System dependencies
+* MySQL
 
 === Configuration
 
