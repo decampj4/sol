@@ -12,13 +12,13 @@ WORKDIR $HOME
 ADD Gemfile* $HOME/ 
 RUN bundle install
 
+# Add the app code 
+ADD . $HOME
+
 # UPDATE THE DB
 RUN rake db:create
 RUN rake db:migrate
 RUN rake data:migrate
-
-# Add the app code 
-ADD . $HOME 
 
 # Default command 
 CMD ["rails", "server", "--binding", "0.0.0.0”, "-e", "production"]
