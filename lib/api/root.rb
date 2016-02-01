@@ -19,7 +19,7 @@ module API
 
     helpers do
       def authenticated
-        params[:token].eql? Rails.application.secrets.kapow_api['api_token']
+        params[:token].eql? Rails.application.secrets.api['token'].to_s
       end
 
       def session
