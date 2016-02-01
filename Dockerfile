@@ -20,7 +20,7 @@ ADD . $HOME
 # UPDATE THE DB
 RUN rake db:create
 RUN rake db:migrate
-RUN rake data:migrate
+# RUN rake data:migrate
 
 # Default command 
 CMD ["rails", "server", "--binding", "0.0.0.0”]
