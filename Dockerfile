@@ -23,4 +23,4 @@ RUN rake db:migrate
 # RUN rake data:migrate
 
 # Default command 
-CMD ["rails", "server"]
+CMD ["rails", "server", "-p", "3000"]
