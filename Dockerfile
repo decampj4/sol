@@ -22,5 +22,8 @@ RUN rake db:create
 RUN rake db:migrate
 # RUN rake data:migrate
 
+# Expose port 3000
+EXPOSE 3000
+
 # Default command 
 CMD ["rails", "server", "-p", "3000"]
