@@ -13,7 +13,7 @@ development:
 
 test:
   <<: *default
-  database: tenant_test
+  database: sol_test
 
 staging:
    <<: *default

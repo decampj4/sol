@@ -14,7 +14,7 @@ module API
         end
 
         get do
-          {"Test" : 'response'}
+          {'Test' => 'response'}
         end
       end
     end
