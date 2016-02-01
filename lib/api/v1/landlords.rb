@@ -1,20 +1,20 @@
 module API
   module V1
-    class Reviews < Grape::API
+    class Landlords < Grape::API
       version 'v1'
       format :json
 
       helpers do
       end
 
-      resource :reviews do
-        desc 'Return all reviews'
+      resource :landlords do
+        desc 'Return all landlords'
 
         params do
         end
 
         get do
-          Review.all
+          Landlord.all
         end
       end
     end

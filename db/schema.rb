@@ -11,6 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160201005414) do
+
+  create_table "landlords", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "company",    limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.string   "street_address_one", limit: 255
+    t.string   "street_address_two", limit: 255
+    t.string   "neighborhood",       limit: 255
+    t.string   "city",               limit: 255
+    t.string   "state",              limit: 255
+    t.string   "postal_code",        limit: 255
+    t.string   "country",            limit: 255
+    t.integer  "bedrooms",           limit: 4
+    t.float    "baths",              limit: 24
+    t.float    "square_footage",     limit: 24
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "landlord_id",        limit: 4
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text     "content",               limit: 65535
+    t.integer  "rating",                limit: 4
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.integer  "time_at_location",      limit: 4
+    t.string   "time_at_location_type", limit: 255
+    t.integer  "properties_id",         limit: 4
+  end
 
 end
