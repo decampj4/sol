@@ -10,7 +10,12 @@ WORKDIR $HOME
 
 # Install gems 
 ADD Gemfile* $HOME/ 
-RUN bundle install 
+RUN bundle install
+
+# UPDATE THE DB
+RUN rake db:create
+RUN rake db:migrate
+RUN rake data:migrate
 
 # Add the app code 
 ADD . $HOME 
