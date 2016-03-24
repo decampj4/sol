@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20160201005414) do
     t.datetime "updated_at",                          null: false
     t.integer  "time_at_location",      limit: 4
     t.string   "time_at_location_type", limit: 255
-    t.integer  "properties_id",         limit: 4
+    t.integer  "property_id",           limit: 4
   end
 
 end

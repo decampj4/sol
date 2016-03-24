@@ -17,6 +17,17 @@ module API
           Landlord.all
         end
       end
+
+      resource :landlord do
+        desc 'Create a new landlord'
+        params do
+          requires :name, type: String
+          optional :company, type: String
+        end
+        post do
+          Landlord.create!(params.slice(:name, :company).inject({}){|h,entry| h.merge!(entry[0].to_sym => entry[1])})
+        end
+      end
     end
   end
 end
